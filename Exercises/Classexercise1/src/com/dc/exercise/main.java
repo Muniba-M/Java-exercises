@@ -4,8 +4,6 @@ import java.util.Scanner;
 public class main {
     private static final int MAX_EMPLOYEES= 5;
     private static Employee[] employees = new Employee[MAX_EMPLOYEES];
-
-    //controls the number of employees
     private static int employeeCount = 0;
     private static final Scanner scanner = new Scanner(System.in);
 
@@ -21,7 +19,6 @@ public class main {
             int choice= scanner.nextInt();
             scanner.nextLine();
 
-            //calling different methods using switch
             switch (choice) {
                 case 1:
                     addEmployee();
@@ -50,7 +47,6 @@ public class main {
             return;
         }
 
-        //Take employee detail
         System.out.print("Enter Employee ID: ");
         int id = scanner.nextInt();
         scanner.nextLine();
@@ -63,7 +59,6 @@ public class main {
         System.out.print("Enter Tax Rate (as decimal, 0.10 for 10%): ");
         double taxRate = scanner.nextDouble();
 
-        //Store in the array
         employees[employeeCount++] = new Employee(id, name, department, salary, taxRate);
         System.out.println("Employee added successfully!");
     }
